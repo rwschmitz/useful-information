@@ -11,8 +11,9 @@ This repository will contain information such as:
 
 ### Helper Functions
 
+#### fancyDataLogging();
 - Display logged data in a more readable format to the browser window.
-    - `function fancyDataLogging($variable) { highlight_string("<?php\nloggedData =\n" . var_export($variable, true) . ";\n?>"); }`
+- `function fancyDataLogging($variable) { highlight_string("<?php\nloggedData =\n" . var_export($variable, true) . ";\n?>"); }`
 
 ## Wordpress
 
