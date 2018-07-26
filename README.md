@@ -3,6 +3,12 @@ This repository will contain information such as:
 - Explanations behind why certain concepts, functions, methods, properties, etc. work the way they do.
 - Useful code snippets and a brief explanation as to what they do.
 
+## PHP
+
+### Syntax
+
+- `<?= $variable; ?>` is equivalent to `<?php echo $variable; ?>` -- It's just convenient shorthand
+
 ## Wordpress
 
 ### Built-in Methods
