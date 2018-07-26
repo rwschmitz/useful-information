@@ -17,5 +17,10 @@ This repository will contain information such as:
     - This method iterates through an array, essentially.
     - It acts similarly to the unary operator, `++`.
     - Due to it's similarity to `++`, it kind of turns the `while` loop into a `for` loop.
-    - **Use case:** while in a `while` loop, `the_post();` will iterate through the array until the `while` loop condition is false and exits.
+    - **Use case:** While in a `while` loop, `the_post();` will iterate through the array until the `while` loop condition is false and exits.
     - [Link to Wordpress Documentation](https://developer.wordpress.org/reference/functions/the_post/)
+    
+- body_class();
+    - This method will allow you to pass in a `string` or `array` to the body.
+    - **Use case:** If you want to dynamically add CSS classes to the body based on whatever conditional, you can use this method.
+    - [Link to Wordpress Documentation](https://developer.wordpress.org/reference/functions/body_class/)
