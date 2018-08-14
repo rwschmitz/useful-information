@@ -3,11 +3,19 @@ This repository will contain information such as:
 - Explanations behind why certain concepts, functions, methods, properties, etc. work the way they do.
 - Useful code snippets and a brief explanation as to what they do.
 
+## React
+
+### General Information
+
+#### API Querying
+
+- API calls to 3rd party APIs should be made in the `componentDidMount() {}` method.
+
 ## PHP
 
 ### Syntax
 
-- `<?= $variable; ?>` is equivalent to `<?php echo $variable; ?>` -- It's just convenient shorthand
+- `<?= $variable; ?>` is equivalent to `<?php echo $variable; ?>` -- It's just convenient shorthand.
 
 ### Helper Functions
 
@@ -38,3 +46,20 @@ This repository will contain information such as:
         - Examples are using the Wordpress methods that start with `the_`, such as `the_title();` or `the_content();`
     - **Use case:** If you're on page A, and you want data from page B, you can create a new query.  Once done with page B's data, you can return to page A with this method.
     - [Codex -- Link to Wordpress Documentation](https://codex.wordpress.org/Function_Reference/wp_reset_postdata)
+    
+    ## WooCommerce
+    
+    ### General Information
+    
+    #### OAuth 1.0 Authentication over HTTP
+    
+    - Create API key in the Wordpress admin with Read/Write access.
+    - Enable legacy REST API.
+    - Hit the following endpoint: `<your url here>/wc-api/v3/products`
+    - To change the number of results returned, go to:  Wordpress admin -> Settings -> Reading -> "Blog pages show at most".
+    - `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version` are all used together at the same time to generate the OAuth 1.0 signature.
+    - Use built-in Node.js `crypto` library with the following:  `const crypto = require('crypto');`
+    - Use OAuthSignature NPM package at the following link: [NPM Package Link](https://www.npmjs.com/package/oauth-signature)
+    - Using the above package, the following snippet of code can be used:  `const encodedSignature = OAuthSignature.generate(requestMethod, requestURL, parameters, consumerSecret);`
+    - The `parameters` variable is made up of:  `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version`
+    - If all settings are correct and the OAuth signature is being generated correctly, you can use Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
