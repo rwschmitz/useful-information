@@ -62,4 +62,4 @@ This repository will contain information such as:
     - Use OAuthSignature NPM package at the following link: [NPM Package Link](https://www.npmjs.com/package/oauth-signature)
     - Using the above package, the following snippet of code can be used:  `const encodedSignature = OAuthSignature.generate(requestMethod, requestURL, parameters, consumerSecret);`
     - The `parameters` variable is made up of:  `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version`
-    - If all settings are correct and the OAuth signature is being generated correctly, you can use Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
+    - If all settings are correct and the OAuth signature is being generated correctly, you can use the Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
