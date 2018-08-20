@@ -11,6 +11,13 @@ This repository will contain information such as:
 
 - API calls to 3rd party APIs should be made in the `componentDidMount() {}` method.
 
+### Helper Functions
+
+#### importImages
+- Grab images from within the project directory to map over
+- `const importImages = r => ( r.keys().map(r) )`
+- `const images = importImages(require.context('../img/<Directory>', false, /\.(png|jpe?g|svg)$/));`
+
 ## PHP
 
 ### Syntax
