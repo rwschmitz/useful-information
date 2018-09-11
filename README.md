@@ -70,3 +70,14 @@ This repository will contain information such as:
     - Using the above package, the following snippet of code can be used:  `const encodedSignature = OAuthSignature.generate(requestMethod, requestURL, parameters, consumerSecret);`
     - The `parameters` variable is made up of:  `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version`
     - If all settings are correct and the OAuth signature is being generated correctly, you can use the Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
+    
+    ## Filestack
+    
+    ### General Information
+    
+    #### Accessing the JSON Response
+    
+    - `onPick` is the method that is called to allow uploading.
+    - Use the `onSuccess` property and pass in `response` for the parameter.
+    - In the return, access the url specifically with `response.filesUploaded[0].url`.
+    - You can access other parts of the JSON response by looking into `response.filesUploaded[0]`.
