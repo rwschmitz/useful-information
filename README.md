@@ -81,3 +81,26 @@ This repository will contain information such as:
     - Use the `onSuccess` property and pass in `response` for the parameter.
     - In the return, access the url specifically with `response.filesUploaded[0].url`.
     - You can access other parts of the JSON response by looking into `response.filesUploaded[0]`.
+    
+    ## CORS
+    
+    ### General Information
+    
+    #### Creating a Canvas from External Server Content
+    
+    - Create canvas with `const yourNewCanvas = document.createElement('canvas');`
+    - Define the width and height of the canvas
+    - Create the context for the canvas with `const yourNewContext = yourNewCanvas.getContext('2d');`
+    - Create a new image with `const yourNewImage = new Image();`
+    - *VERY IMPORTANT* -- Set the attribute on your new image BEFORE defining the src.
+        - `yourNewImage.setAttribute('crossOrigin', 'anonymous');`
+        - `yourNewImage.src = <insert your 3rd party content as the source here>;`
+    - Call the `drawImage()` method on `yourNewContext` like so:  `yourNewContext.drawImage(yourNewImage, ...define widths and heights here)`
+    - You may now turn the new canvas into a blob and resolve the blob to an image
+    - `return new Promise((resolve, reject) => {`
+        `canvas.toBlob(file => {`
+        `file.name = fileName;`
+        `resolve(file);`
+        `}, 'image/jpeg');`
+     `});`
+     
