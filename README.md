@@ -92,7 +92,7 @@ This repository will contain information such as:
     - Define the width and height of the canvas
     - Create the context for the canvas with `const yourNewContext = yourNewCanvas.getContext('2d');`
     - Create a new image with `const yourNewImage = new Image();`
-    - *VERY IMPORTANT* -- Set the attribute on your new image BEFORE defining the src.
+    - **VERY IMPORTANT** -- Set the attribute on your new image BEFORE defining the src.
         - `yourNewImage.setAttribute('crossOrigin', 'anonymous');`
         - `yourNewImage.src = <insert your 3rd party content as the source here>;`
     - Call the `drawImage()` method on `yourNewContext` like so:  `yourNewContext.drawImage(yourNewImage, ...define widths and heights here)`
