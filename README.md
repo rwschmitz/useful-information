@@ -3,6 +3,32 @@ This repository will contain information such as:
 - Explanations behind why certain concepts, functions, methods, properties, etc. work the way they do.
 - Useful code snippets and a brief explanation as to what they do.
 
+## JavaScript
+
+### General Information
+
+#### The keyword `this`
+
+- The instance of `this` is not bound in an arrow function.
+- The instance of `this` **IS** bound to a regular function.
+- Example:
+    ```
+      const coolOuterFunction = () => {
+        const coolImage = new Image();
+        coolImage.onload = function innerFunction() {
+           console.log(this) // this is scoped to innerFunction()
+       }
+      }
+     ```
+     ```
+      const coolOuterFunction = () => {
+        const coolImage = new Image();
+        coolImage.onload = () => {
+           console.log(this) // this is scoped to coolOuterFunction()
+       }
+      }
+     ```
+
 ## React
 
 ### General Information
