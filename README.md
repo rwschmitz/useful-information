@@ -2,6 +2,7 @@
 This repository will contain information such as:
 - Explanations behind why certain concepts, functions, methods, properties, etc. work the way they do.
 - Useful code snippets and a brief explanation as to what they do.
+- Useful articles that explain concepts in detail.
 
 ## JavaScript
 
@@ -29,6 +30,12 @@ This repository will contain information such as:
       }
      ```
 - [Codepen Example](https://codepen.io/rwschmitz/pen/RqVNVR)
+
+### Articles
+
+#### Classes, new, instanceof, prototype chains and API design by Dan Abramov
+
+- [How Does React Tell a Class from a Function](https://overreacted.io/how-does-react-tell-a-class-from-a-function/)
 
 ## React
 
