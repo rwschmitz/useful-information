@@ -36,8 +36,18 @@ This repository will contain information such as:
 #### Classes, new, instanceof, prototype chains and API design by Dan Abramov
 
 - [How Does React Tell a Class from a Function](https://overreacted.io/how-does-react-tell-a-class-from-a-function/)
+
+#### Using .call() and .apply()
+
 - [Changing The Execution Context Of JavaScript Functions Using Call() And Apply()](https://www.bennadel.com/blog/2265-changing-the-execution-context-of-javascript-functions-using-call-and-apply.htm)
+
+#### JavaScript Algorithms
+
 - [JavaScript Algorithms](https://github.com/trekhleb/javascript-algorithms)
+
+#### General React Information
+
+- [React Resources](https://reactresources.com/)
 
 ## React
 
