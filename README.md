@@ -49,6 +49,10 @@ This repository will contain information such as:
 
 - [React Resources](https://reactresources.com/)
 
+#### JavaScript Clean Code - Best Practices
+
+- [JavaScript Clean Code - Best Practices](https://devinduct.com/blogpost/22/javascript-clean-code-best-practices)
+
 ## React
 
 ### General Information
