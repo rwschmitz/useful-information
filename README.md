@@ -154,3 +154,11 @@ This repository will contain information such as:
         `}, 'image/jpeg');`
      `});`
      
+## Shopify
+
+### Forms
+
+#### Adding a custom CSS class to Shopify forms
+
+- There is a class filter you can hook into.
+- Example:  `{% form 'create_customer', class: 'CUSTOM_CLASS_HERE' %}`
