@@ -104,56 +104,56 @@ This repository will contain information such as:
     - **Use case:** If you're on page A, and you want data from page B, you can create a new query.  Once done with page B's data, you can return to page A with this method.
     - [Codex -- Link to Wordpress Documentation](https://codex.wordpress.org/Function_Reference/wp_reset_postdata)
     
-    ## WooCommerce
-    
-    ### General Information
-    
-    #### OAuth 1.0 Authentication over HTTP
-    
-    - Create API key in the Wordpress admin with Read/Write access.
-    - Enable legacy REST API.
-    - Hit the following endpoint: `<your url here>/wc-api/v3/products`
-    - To change the number of results returned, go to:  Wordpress admin -> Settings -> Reading -> "Blog pages show at most".
-    - `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version` are all used together at the same time to generate the OAuth 1.0 signature.
-    - Use built-in Node.js `crypto` library with the following:  `const crypto = require('crypto');`
-    - Use OAuthSignature NPM package at the following link: [NPM Package Link](https://www.npmjs.com/package/oauth-signature)
-    - Using the above package, the following snippet of code can be used:  `const encodedSignature = OAuthSignature.generate(requestMethod, requestURL, parameters, consumerSecret);`
-    - The `parameters` variable is made up of:  `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version`
-    - If all settings are correct and the OAuth signature is being generated correctly, you can use the Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
-    
-    ## Filestack
-    
-    ### General Information
-    
-    #### Accessing the JSON Response
-    
-    - `onPick` is the method that is called to allow uploading.
-    - Use the `onSuccess` property and pass in `response` for the parameter.
-    - In the return, access the url specifically with `response.filesUploaded[0].url`.
-    - You can access other parts of the JSON response by looking into `response.filesUploaded[0]`.
-    
-    ## CORS
-    
-    ### General Information
-    
-    #### Creating a Canvas from External Server Content
-    
-    - Create canvas with `const yourNewCanvas = document.createElement('canvas');`
-    - Define the width and height of the canvas
-    - Create the context for the canvas with `const yourNewContext = yourNewCanvas.getContext('2d');`
-    - Create a new image with `const yourNewImage = new Image();`
-    - **VERY IMPORTANT** -- Set the attribute on your new image BEFORE defining the src.
-        - `yourNewImage.setAttribute('crossOrigin', 'anonymous');`
-        - `yourNewImage.src = <insert your 3rd party content as the source here>;`
-    - Call the `drawImage()` method on `yourNewContext` like so:  `yourNewContext.drawImage(yourNewImage, ...define widths and heights here)`
-    - You may now turn the new canvas into a blob and resolve the blob to an image
-    - `return new Promise((resolve, reject) => {`
-        `canvas.toBlob(file => {`
-        `file.name = fileName;`
-        `resolve(file);`
-        `}, 'image/jpeg');`
-     `});`
-     
+## WooCommerce
+
+### General Information
+
+#### OAuth 1.0 Authentication over HTTP
+
+  - Create API key in the Wordpress admin with Read/Write access.
+  - Enable legacy REST API.
+  - Hit the following endpoint: `<your url here>/wc-api/v3/products`
+  - To change the number of results returned, go to:  Wordpress admin -> Settings -> Reading -> "Blog pages show at most".
+  - `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version` are all used together at the same time to generate the OAuth 1.0 signature.
+  - Use built-in Node.js `crypto` library with the following:  `const crypto = require('crypto');`
+  - Use OAuthSignature NPM package at the following link: [NPM Package Link](https://www.npmjs.com/package/oauth-signature)
+  - Using the above package, the following snippet of code can be used:  `const encodedSignature = OAuthSignature.generate(requestMethod, requestURL, parameters, consumerSecret);`
+  - The `parameters` variable is made up of:  `oauth_consumer_key`, `oauth_nonce`, `oauth_timestamp`, `oauth_signature_method` and `oauth_version`
+  - If all settings are correct and the OAuth signature is being generated correctly, you can use the Axios library.  Axios is at the following link:  [NPM Package Link](https://www.npmjs.com/package/axios)
+
+## Filestack
+
+### General Information
+
+#### Accessing the JSON Response
+
+  - `onPick` is the method that is called to allow uploading.
+  - Use the `onSuccess` property and pass in `response` for the parameter.
+  - In the return, access the url specifically with `response.filesUploaded[0].url`.
+  - You can access other parts of the JSON response by looking into `response.filesUploaded[0]`.
+  
+## CORS
+
+### General Information
+
+#### Creating a Canvas from External Server Content
+
+  - Create canvas with `const yourNewCanvas = document.createElement('canvas');`
+  - Define the width and height of the canvas
+  - Create the context for the canvas with `const yourNewContext = yourNewCanvas.getContext('2d');`
+  - Create a new image with `const yourNewImage = new Image();`
+  - **VERY IMPORTANT** -- Set the attribute on your new image BEFORE defining the src.
+      - `yourNewImage.setAttribute('crossOrigin', 'anonymous');`
+      - `yourNewImage.src = <insert your 3rd party content as the source here>;`
+  - Call the `drawImage()` method on `yourNewContext` like so:  `yourNewContext.drawImage(yourNewImage, ...define widths and heights here)`
+  - You may now turn the new canvas into a blob and resolve the blob to an image
+  - `return new Promise((resolve, reject) => {`
+      `canvas.toBlob(file => {`
+      `file.name = fileName;`
+      `resolve(file);`
+      `}, 'image/jpeg');`
+    `});`
+
 ## Shopify
 
 ### Forms
