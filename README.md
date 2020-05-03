@@ -53,6 +53,15 @@ This repository will contain information such as:
 
 - [JavaScript Clean Code - Best Practices](https://devinduct.com/blogpost/22/javascript-clean-code-best-practices)
 
+### Api Design
+
+#### Post Request
+
+- Incoming post requests will contain data, and this data can be put on the post body.
+- If using axios on the FE, an example would be:  `axios.post(url, { data: { someKey: 'someValue' } } )`
+- In your API on the backend, you can access this data with `req.body` and see `someKey: 'someValue'`
+- Alternatively, when you post data on the FE, you can put this data in query params.
+
 ## React
 
 ### General Information
