@@ -177,3 +177,25 @@ This repository will contain information such as:
 ### Seeing all releases of Node
 
 - `nvm ls-remote`
+
+## Strapi
+
+## Table information persists
+
+- Even when you delete something out of the UI portion of the CMS, the name remains in the database.
+
+## Column character limit in Postgres
+
+- The limit is 63 characters, so name your columns accordingly.
+
+### Upload limit
+
+- The max upload limit for the asset library is initially restricted by your Nginx conf file.
+- Go to `/etc/nginx/nginx.conf`
+- Make the following change:
+```
+http {
+  client_max_body_size 10M;
+}
+```
+- This will change the upload size to 10MB.
