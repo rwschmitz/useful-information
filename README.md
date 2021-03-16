@@ -180,11 +180,11 @@ This repository will contain information such as:
 
 ## Strapi
 
-## Table information persists
+### Table information persists
 
 - Even when you delete something out of the UI portion of the CMS, the name remains in the database.
 
-## Column character limit in Postgres
+### Column character limit in Postgres
 
 - The limit is 63 characters, so name your columns accordingly.
 
