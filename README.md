@@ -180,15 +180,15 @@ This repository will contain information such as:
 
 ## Strapi
 
-### Table information persists
+### Table Information Persists
 
 - Even when you delete something out of the UI portion of the CMS, the name remains in the database.
 
-### Column character limit in Postgres
+### Column Character Limit in Postgres
 
 - The limit is 63 characters, so name your columns accordingly.
 
-### Upload limit
+### Asset Upload Limit
 
 - The max upload limit for the asset library is initially restricted by your Nginx conf file.
 - Go to `/etc/nginx/nginx.conf`
